@@ -4,11 +4,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@ExtendWith(MockitoExtension.class)
 @DisplayName("Tests of Class Person")
 class PersonTests {
 
@@ -17,6 +15,7 @@ class PersonTests {
 	@BeforeEach
 	void setUp() {
 
+		// Given
 		String a = "Ivan";
 		int b = 18;
 
@@ -44,7 +43,7 @@ class PersonTests {
 
 	@DisplayName("the getAge method works correct")
 	@Test
-	void getAge() {
+	void getAge_01() {
 		assertEquals(18, person.getAge());
 	}
 }
